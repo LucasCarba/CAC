@@ -1,0 +1,11 @@
+.data
+tbla: .word 8,9,10
+
+.code
+ld r2, tabla(r0)
+//GENERO OFFSET
+daddi r3, r0,tabla
+ld r4,0(r3)----> 8
+ld r5, 8(r3)----> 9
+ld r6, 16(r3)----->10
+halt
